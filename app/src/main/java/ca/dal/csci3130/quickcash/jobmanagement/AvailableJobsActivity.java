@@ -141,7 +141,7 @@ public class AvailableJobsActivity extends FragmentActivity implements OnMapRead
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     Job job = dataSnapshot.getValue(Job.class);
                     if (job != null) {
-                        boolean jobInPref = payRate < job.getPayRate() && duration > job.getDuration() && job.acceptingApplications();
+                        boolean jobInPref = payRate <= job.getPayRate() && duration > job.getDuration() && job.acceptingApplications();
                         // if job type was specified, check whether its equal or not. If not, then just check the other prefs.
                         if (jobInPref && (!jobTypeSpecified || jobType.equalsIgnoreCase(job.getJobType()))) {
                             jobList.add(job);

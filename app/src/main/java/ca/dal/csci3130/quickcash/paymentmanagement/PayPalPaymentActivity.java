@@ -161,7 +161,7 @@ public class PayPalPaymentActivity extends AppCompatActivity {
                         Map<String, Object> jobUpdate = new HashMap<>();
                         jobUpdate.put("jobStatusOpen", false);
                         jobRef.updateChildren(jobUpdate);
-                        Toast.makeText(getApplicationContext(), "Job Closed, Moving to Payment", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Job Closed", Toast.LENGTH_LONG).show();
                     }
                 }
             }
